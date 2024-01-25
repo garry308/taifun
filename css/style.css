@@ -33,6 +33,7 @@ body {
 a,
 button {
   cursor: pointer;
+  font-family: unset;
 }
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -53,7 +54,7 @@ img {
   height: 90px;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #000131;
   opacity: 0.9;
   padding: 0 40px;
   border-radius: 45px;
@@ -70,9 +71,9 @@ img {
 }
 .header__link {
   text-decoration: none;
-  color: #2b2b2b;
-  font-family: FuturaPT;
-  font-weight: 500;
+  color: #FFFFFF;
+  font-family: Muller;
+  font-weight: 300;
   font-size: 18px;
   height: 100%;
   display: flex;
@@ -87,16 +88,18 @@ img {
 .eco__logo {
   position: relative;
   z-index: 33;
+  width: 213px;
 }
 .eco__button-cont {
   width: 206px;
   height: 50px;
-  background: linear-gradient(94.14deg, #ffc522 8.37%, #ffbe09 90.95%);
+  background: #FFF;
   box-shadow: 0 4px 20px rgba(117, 84, 65, 0.2);
   border-radius: 25px;
   display: flex;
   justify-content: center;
   transition-duration: 0.3s;
+  font-size: 20px
 }
 .header .eco__button-cont {
   margin: 0;
@@ -112,7 +115,7 @@ img {
 }
 .eco__button-cont:hover,
 .eco__button-cont:hover .eco__button-wrapper {
-  background: #ffd04a;
+  background: #DBE2E9;
 }
 .eco .header-button {
   display: none;
@@ -151,7 +154,7 @@ img {
   width: 30px;
   height: 3px;
   border-radius: 5px;
-  background-color: #ffc522;
+  background-color: #fff;
   transition-duration: 0.3s;
 }
 .burger::before {
@@ -165,7 +168,7 @@ img {
   width: 30px;
   height: 3px;
   border-radius: 5px;
-  background-color: #ffc522;
+  background-color: #fff;
   top: 50%;
   margin-top: -1px;
   transition-duration: 0.3s;
@@ -223,9 +226,34 @@ img {
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url(../fonts/MullerBold.woff) format("woff"),
+  url(../fonts/MullerBold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url(../fonts/MullerLight.woff) format("woff"),
+  url(../fonts/MullerLight.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url(../fonts/MullerMedium.woff) format("woff"),
+  url(../fonts/MullerMedium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
 .title__banner {
   width: 100%;
-  background: url(../img/banner.png) center/cover no-repeat local;
+  height: 100vh;
+  background: url(../img/banner.webp) center/cover no-repeat local;
   position: relative;
   z-index: 2;
 }
@@ -237,14 +265,13 @@ img {
   color: #fff;
   font-size: 48px;
   text-align: center;
-  margin-bottom: 110px;
-  padding-top: 280px;
+  padding-top: 50vh;
 }
 .main__title span {
-  color: #ffc522;
+  color: #FFF8DC;
 }
 .eco {
-  font-family: FuturaPT;
+  font-family: Muller, sans-serif;
   position: relative;
 }
 .eco__container {
@@ -514,6 +541,12 @@ img {
 .main__slide-text {
   text-align: center;
   padding: 50px 5px;
+  font-size: 20px
+}
+.main__slide-text p {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'FuturaPT'
 }
 .main__slider-overflow {
   border-bottom-left-radius: 85% 45%;
@@ -537,14 +570,25 @@ img {
   position: relative;
   z-index: 2;
 }
-.orgo__inner {
+.about__inner {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px
 }
-.orgo__text-info {
+.about__text-info {
   font-size: 24px;
   color: #606060;
+  flex-basis: 35%;
+  flex-grow: 1;
+}
+.about__text {
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+.about__img {
+  flex-grow: 2;
+  flex-basis: 30%;
 }
 .eco__sub-title {
   text-align: center;
@@ -556,7 +600,6 @@ img {
   margin-bottom: 15px;
 }
 .eco__title {
-  text-align: center;
   line-height: 1;
   margin-bottom: 25px;
   font-size: 36px;
@@ -1146,8 +1189,9 @@ h5 {
 }
 @media (max-width: 1200px) {
   .main__title {
-    margin-bottom: 39px;
-    padding-top: 150px;
+    padding-top: 20vh;
+    font-size: 30px;
+    margin-bottom: 20vh;
   }
   .main__slider-wrapper {
     max-width: 700px;
@@ -1256,10 +1300,6 @@ h5 {
   .header {
     margin-bottom: 0;
   }
-  .main__title {
-    margin-bottom: 85px;
-    font-size: 25px;
-  }
 }
 @media (max-width: 925px) {
   .compound__block-inner-g {
@@ -1303,12 +1343,12 @@ h5 {
   }
 }
 @media (max-width: 768px) {
-  .orgo__inner {
+  .about__inner {
     flex-direction: column;
   }
-  .orgo__text {
-    text-align: center;
-    margin-bottom: 29px;
+  .about__text {
+    margin: 0 10px;
+    flex-basis: unset;
   }
   .text-page .img-left,
   .text-page .img-right {
@@ -1354,7 +1394,7 @@ h5 {
 }
 @media (max-width: 649px) {
   .eco__logo {
-    max-width: 200px;
+    max-width: 140px;
   }
 }
 @media (max-width: 645px) {
@@ -1421,7 +1461,8 @@ h5 {
     left: 0;
   }
   .main__title {
-    margin-bottom: 50px;
+    font-size: 24px;
+    padding-top: 20vh;
   }
   .video__video video {
     width: 400px;
@@ -1524,7 +1565,7 @@ h5 {
   .main__slider-slide {
     margin-left: 0;
   }
-  .orgo__text-info {
+  .about__text-info {
     font-size: 18px;
   }
   .eco__sub-title {
@@ -2013,7 +2054,7 @@ ul.header__lists > li.is-parent:hover > a::after {
 .mobile-navigation-sub-position {
   position: absolute;
   height: calc(100vh - 105px);
-  background: #fff;
+  background: #000131;
   transition: opacity 0.15s;
   box-shadow: inset 0 46px 32px -32px rgba(0, 0, 0, 0.06);
   height: fit-content;
